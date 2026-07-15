@@ -1,0 +1,7 @@
+from django.http import HttpResponse
+
+def teste_view(request):
+    return HttpResponse("<h1>Olá, mundo! Esta é uma view de teste.</h1>",)
+
+def index_view(request):
+    return HttpResponse("<h1>Bem-vindo à página inicial!</h1> <li><a href="+"{% url 'tarefas:home' %}"+">Home</a></li>")

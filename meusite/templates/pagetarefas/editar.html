@@ -1,0 +1,120 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+=======
+<!DOCTYPE html>    
+>>>>>>> 1186b51b3c75623195121236dc5d851d2f511f45
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>Editar Tarefa</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #f7f7f8;
+            color: #222;
+            margin: 0;
+            padding: 32px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        form {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            max-width: 480px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            font-family: inherit;
+            font-size: 0.9rem;
+            padding: 8px 10px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            background: #fafafa;
+            color: #222;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #999;
+            background: #fff;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.15s ease;
+        }
+
+        button:hover {
+            background: #111;
+        }
+    </style>
+</head>
+<body>
+    <h1>Editar Tarefa</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" name="assunto" value="{{tarefa.assunto}}" required>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required>{{tarefa.descricao}}</textarea>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="True" {% if tarefa.status %}selected{% endif %}>Completo</option>
+            <option value="False" {% if not tarefa.status %}selected{% endif %}>Incompleto</option>
+        </select>
+
+        <button type="submit">Salvar Alterações</button>
+=======
+    <title>Editar</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>Área de edição</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Atualizar</button>
+>>>>>>> 1186b51b3c75623195121236dc5d851d2f511f45
+    </form>
+</body>
+</html>

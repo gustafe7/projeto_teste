@@ -1,0 +1,94 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Tarefa</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #f7f7f8;
+            color: #222;
+            margin: 0;
+            padding: 32px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        form {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            max-width: 480px;
+        }
+
+        form p {
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        form input,
+        form textarea,
+        form select {
+            width: 100%;
+            font-family: inherit;
+            font-size: 0.9rem;
+            padding: 8px 10px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            background: #fafafa;
+            color: #222;
+            box-sizing: border-box;
+        }
+
+        form input:focus,
+        form textarea:focus,
+        form select:focus {
+            outline: none;
+            border-color: #999;
+            background: #fff;
+        }
+
+        form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.15s ease;
+        }
+
+        button:hover {
+            background: #111;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adicionar Tarefa</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Adicionar</button>
+    </form>
+</body>
+</html>
